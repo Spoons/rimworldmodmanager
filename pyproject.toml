@@ -8,6 +8,7 @@ authors = [
   {name = "Pau Figueras", email = "github@pswsm.cat"},
   {name = "Michael Ciociola", email = "michael@ciocio.la"}
 ]
+description = "A mod manager for RimWorld. Forked from rmm-spoons"
 version = "1.1"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -18,6 +19,9 @@ classifiers = [
   "Topic :: Games/Entertainment",
   "Topic :: System :: Archiving :: Packaging"
 ]
+
+[project.scripts]
+rmm = "rmm.main:main"
 
 [project.urls]
 Homepage = "https://github.com/pswsm/rmm"
