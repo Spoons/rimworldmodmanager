@@ -3,13 +3,13 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
+dynamic = ["version"]
 name = "rmm-awesome"
 authors = [
   {name = "Pau Figueras", email = "github@pswsm.cat"},
   {name = "Michael Ciociola", email = "michael@ciocio.la"}
 ]
 description = "A mod manager for RimWorld. Forked from rmm-spoons"
-version = "1.1.2"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -19,6 +19,7 @@ classifiers = [
   "Topic :: Games/Entertainment",
   "Topic :: System :: Archiving :: Packaging"
 ]
+dependencies = ["tabulate", "bs4"]
 
 [project.scripts]
 rmm = "rmm.cli:run"
@@ -29,3 +30,6 @@ Repository = "https://github.com/pswsm/rmm"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/rmm"]
+
+[tool.hatch.version]
+path = "src/rmm/__about__.py"
